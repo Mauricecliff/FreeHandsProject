@@ -1,4 +1,5 @@
 import Example from "./Example";
+import "./index.css";
 
 function App() {
   return (
