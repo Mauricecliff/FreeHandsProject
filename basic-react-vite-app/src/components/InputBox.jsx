@@ -15,18 +15,16 @@ function InputBox({
 }) {
   const labelId = useId();
 
-  console.log("currency options>>>", currencyOptions);
-
   return (
     <div className=" bg-transparent flex justify-center">
-      <div className=" bg-white p-7 placeholder:h-[40vh] mt-8 rounded-md w-1/2">
+      <div className=" bg-white p-7 placeholder:h-[40vh] mt-8 rounded-md sm:w-[85%]">
         <label htmlFor={labelId} className=" text-gray-400">
           {label}
         </label>
         <div className="flex justify-between">
           <input
+            type="text"
             value={amount}
-            type="number"
             name="price"
             id={labelId}
             className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

@@ -4,8 +4,8 @@ import useCurrency from "./hooks/useCurrency";
 import "./index.css";
 
 function App() {
-  const [amount, setAmount] = useState(0);
-  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [amount, setAmount] = useState("");
+  const [convertedAmount, setConvertedAmount] = useState("");
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("ngn");
 
@@ -13,7 +13,7 @@ function App() {
   const options = Object.keys(currencyInfo);
 
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to]);
+    setConvertedAmount(Number(amount * currencyInfo[to]).toFixed(3));
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -23,7 +23,7 @@ function App() {
     setConvertedAmount(amount);
     setAmount(convertedAmount);
   };
-  console.log("selectedCurr>>>", from);
+
   return (
     <div
       className="h-screen"
@@ -37,6 +37,7 @@ function App() {
         Currency Converter
       </h1>
       <form
+        className="m-[3rem]"
         onSubmit={(e) => {
           e.preventDefault();
           convert();
