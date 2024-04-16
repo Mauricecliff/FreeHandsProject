@@ -60,7 +60,7 @@ function App() {
           amountDisabled={true}
           convert={convert}
         />
-        <Button />
+        <Button from={from} to={to} />
       </form>
     </div>
   );
