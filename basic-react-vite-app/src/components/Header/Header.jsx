@@ -1,5 +1,5 @@
-function HeaderComponent() {
+function Header() {
   return <div>Header</div>;
 }
 
-export default HeaderComponent;
+export default Header;
